@@ -1,10 +1,9 @@
 {
   "pages": [
-    "pages/canteenMenu/canteenMenu",
     "pages/index/index",
+    "pages/canteenMenu/canteenMenu",
     "pages/canteen/canteen",
-    "pages/logs/logs",
-    "pages/main/main"
+    "pages/logs/logs"
 
   ],
   "window": {

@@ -1,0 +1,62 @@
+.head{
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-end;
+  align-items: center;
+  height: 250rpx;
+  width: 750rpx;
+  background-color: rgba(218, 114, 45, 0.3);
+ 
+}
+
+.item{
+  width:180rpx;
+  height: 180rpx;
+}
+
+.canteenImg{
+  width:180rpx;
+  height: 180rpx;
+}
+
+.canteenInfo{
+  width: 750rpx;
+  height: 150rpx;
+  background-color: #fea;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.canteenName{
+  font-weight: 550;
+}
+.cName{
+  margin-top: 5px;
+}
+
+.cInfo{
+  margin-top:20rpx;
+  margin-bottom: 20rpx;
+  height: 25rpx;
+  font-size: 25rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.score{
+  height: 25rpx;
+  margin:0px 20rpx;
+}
+
+.saleVolume{
+  height: 25rpx;
+  margin:0px 20rpx;  
+}
+
+.distance{
+  height: 25rpx;
+  margin:0px 20rpx;  
+}

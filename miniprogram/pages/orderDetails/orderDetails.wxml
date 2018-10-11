@@ -1,3 +1,4 @@
-<view>
-  <text>这里是订单详情页面</text>
+<view class="container">
+  <view>取餐倒计时: <text style='color:red'>{{countdown}} </text></view>
+  <view>{{countDownHour}}时:{{countDownMinute}}分:{{countDownSecond}}秒</view>
 </view>

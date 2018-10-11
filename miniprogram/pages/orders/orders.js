@@ -42,7 +42,7 @@ Page({
           "price": "26",
           "reserver": "康运维",
           "imgurl": "../../images/photo4.jpg",
-          "state": 0
+          "state": 1
         },
         {
           "id": 5,

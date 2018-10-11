@@ -2,7 +2,9 @@
   "pages": [
     "pages/index/index",
     "pages/canteenMenu/canteenMenu",
-    "pages/canteen/canteen"
+    "pages/canteen/canteen",
+    "pages/orders/orders",
+    "pages/orderDetails/orderDetails"
 
   ],
   "window": {
@@ -24,7 +26,7 @@
       {
         "selectedIconPath": "images/dd_red.png",
         "iconPath": "images/dd_gray.png",
-         "pagePath":"pages/canteen/canteen",
+        "pagePath": "pages/orders/orders",
         "text": "订单"
       },
       {

@@ -2,8 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/canteenMenu/canteenMenu",
-    
-    "pages/canteen/canteen"
+    "pages/canteen/canteen",
+    "pages/logs/logs"
 
   ],
   "window": {

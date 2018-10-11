@@ -5,7 +5,6 @@
     "pages/logs/logs",
     "pages/orders/orders",
     "pages/orderDetails/orderDetails",
-    "pages/main/main",
     "pages/canteenMenu/canteenMenu"
 
   ],

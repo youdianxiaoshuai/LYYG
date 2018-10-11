@@ -1,26 +1,33 @@
 <view class="page">
-<!-- location -->
-<view class="header">
-  <view class="location_icon">
-  <icon class="iconfont icon-location"></icon>
-</view>
-<view class="location_font">
-  <text class="location_name">吉林大学</text>
-</view>
-</view>
-<!-- search -->
-  <view class="weui-search-bar">
+<!-- head -->
+<view class="head" style='width:750rpx;height:90px;background-color:rgb(234,84,33);'>
+<view class="head_a" style='height:40px;align-items:center;display:flex'>
+  <view class="locationInfo" style='padding-left:18px' style="display:inline-block;margin-top:5px;">
+    <image src='../../images/dingwei.png' style="width:12px;height:12px;margin-left:10px"></image>
+    <text style="color:white;font-size:28rpx;margin-left:5px;">中国银联研发大楼</text>
+    <image src='../../images/xiala.png' style="width:6px;height:5px;margin-left:5px"></image>
+  </view>
+  <view style="display:inline-block">
+  <image src='../../images/saoyisao.png'  style="width:12px;height:12px;margin-left:125px"></image>
+  <text style="color:rgb(244,182,71);font-size:28rpx;margin-left:5px;">扫码</text>
+  <image src='../../images/hongbao.png' style='width:17px;height:18px;margin-left:10px;margin-top:2px;'></image>
+  <view style="display:inline-block;width:20px;height:25px;font-size:7px;color:rgb(244,182,71);margin-left:5px;">签到有礼</view>
+  </view>
+  </view>
+
+<!-- 搜索 -->
+<view class="weui-search-bar">
           <view class="weui-search-bar__form">
                 <view class="weui-search-bar__box">
                     <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
-                    <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+                    <input type="text" class="weui-search-bar__input" placeholder="搜索美食名称" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
                     <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
                         <icon type="clear" size="14"></icon>
                     </view>
                 </view>
                 <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
                     <icon class="weui-icon-search" type="search" size="14"></icon>
-                    <view class="weui-search-bar__text">搜索</view>
+                    <view class="weui-search-bar__text" style='font-size:12px;'>搜索美食名称</view>
                 </label>
             </view>
             <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
@@ -47,97 +54,76 @@
                 </view>
             </navigator>
         </view>
-        <!-- menu -->
-  <view class="weui-flex" >
-  
-    <navigator wx:for="{{menu}}" class="weui-flex__item" style="padding:10px" open-type='navigate' url="../canteen/canteen" hover-class='none'>
-      <image src="../../images/food.png" style="width: 50px; height: 50px" class="img"></image>
-      <text class="img_des">{{item}}</text>
+
+</view>
+<!-- 广告 -->
+<view>
+  <image src="../../images/guanggao.png" style='width:100%;height:110px'></image>
+  </view>
+<!-- 菜单menu -->
+<view class="menu" >
+  <navigator class="menu_item" wx:for="{{menuItem}}" wx:for-item="item" wx:key="item">
+    <image src='{{item.src}}'></image>
+    <text>{{item.name}}</text>
+  </navigator> 
+</view>
+<!-- 社区头条 -->
+<view class="communityHeadline">
+  <image src='../../images/shequtoutiao.png' style='width:80rpx;height:80rpx;'></image>
+  <view class="comHeadLineText">
+    <navigator class="cmtxt">
+      <view class="hot">热门</view>
+      <text style='font-size:26rpx'>盘点学校食堂最美味的饭菜</text>
+    </navigator>
+    <navigator class="cmtxt">
+      <view class="hot">热门</view>
+      <text style='font-size:26rpx'>盘点学校食堂最美味的饭菜</text>
     </navigator>
   </view>
-
-<!-- advertisement -->
-  <view>
-  <image src="../../images/advertisement.png" style='width:100%;height:180px'></image>
+  <image src='../../images/toutiaotupian.png' style='width:166rpx;height:88rpx;'></image>
+</view>
+<!-- 猜你喜欢 -->
+<view class="gussULike">
+  <text class="title">猜你喜欢</text>
+  <view class="gULikePics">
+    <image src="../../images/yingyang.png" style='width:350rpx;height:350rpx;'></image>
+    <view >
+      <image src="../../images/xinzeng.png" style='width:350rpx;height:175rpx;'></image>
+      <view style='display:flex;justify-content: space-between;'>
+        <image src="../../images/dizhicaipin.png" style='width:170rpx;height:170rpx;'></image>
+        <image src="../../images/henikouwei.png" style='width:170rpx;height:170rpx;'></image>    
+      </view>
+    </view>
+    
   </view>
+</view>
 
-<!-- panel -->
-<view class="weui-panel weui-panel_access">
-            <view class="weui-panel__hd">猜你得喜欢的吃的</view>
-            <view class="weui-panel__bd">
-                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
-                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                        <image class="weui-media-box__thumb" src="../../images/food.png" />
-                    </view>
-                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                        <view class="weui-media-box__title">吃的一</view>
-                        <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
-                    </view>
-                </navigator>
-                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
-                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                        <image class="weui-media-box__thumb" src="../../images/food.png" />
-                    </view>
-                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                        <view class="weui-media-box__title">标题二</view>
-                        <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
-                    </view>
-                </navigator>
-                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
-                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                        <image class="weui-media-box__thumb" src="../../images/food.png" />
-                    </view>
-                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                        <view class="weui-media-box__title">吃的</view>
-                        <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
-                    </view>
-                </navigator>
-                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
-                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                        <image class="weui-media-box__thumb" src="../../images/food.png" />
-                    </view>
-                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                        <view class="weui-media-box__title">吃的三</view>
-                        <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
-                    </view>
-                </navigator>
-                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
-                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                        <image class="weui-media-box__thumb" src="../../images/food.png" />
-                    </view>
-                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                        <view class="weui-media-box__title">吃的四</view>
-                        <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
-                    </view>
-                </navigator>
-                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
-                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                        <image class="weui-media-box__thumb" src="../../images/food.png" />
-                    </view>
-                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                        <view class="weui-media-box__title">吃的五</view>
-                        <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
-                    </view>
-                </navigator>
-                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
-                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                        <image class="weui-media-box__thumb" src="../../images/food.png" />
-                    </view>
-                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                        <view class="weui-media-box__title">吃的六</view>
-                        <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
-                    </view>
-                </navigator>
-                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
-                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                        <image class="weui-media-box__thumb" src="../../images/food.png" />
-                    </view>
-                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                        <view class="weui-media-box__title">吃的七</view>
-                        <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
-                    </view>
-                </navigator>
+<view>
+  <view style='width:720rpx;display:flex;justify-content:space-between;height:60rpx;padding:20rpx;'>
+    <text class="title">帮忙带餐</text>
+    <text style='font-size:26rpx;margin-top:20rpx;'>共66份 ></text>
+  </view>
+  <scroll-view  scroll-x="true" style='height:300rpx;width:750rpx;'>
+  <view style="750rpx;display:flex;flex-direction:row;justify-content:flex-start;">
+   <image src='../../images/bmd1.png' class="bmdItem"  ></image>
+   <image src='../../images/bmd2.png' class="bmdItem" ></image>
+   <image src='../../images/bmd3.png' class="bmdItem" ></image>
+   <image src='../../images/bmd1.png' class="bmdItem" style="margin-left:15rpx" ></image>
+   <image src='../../images/bmd2.png' class="bmdItem" ></image>
+   <image src='../../images/bmd3.png' class="bmdItem" ></image>
+   </view>
+  </scroll-view>
+  <view style='padding:30rpx;'>
+  <text class="title" style='margin-bottom:30rpx;'>卡路里排行榜</text>
+  <view style='display:flex;justify-content:space-around'>
+    <view class="bangBG">
+      <image src='../../images/yuebang.png' class="bangDan"></image>
+    </view>
+    <view class="bangBG">
+      <image src='../../images/ribang.png' class="bangDan"></image>
+    </view>
+  </view>
+  </view>
+</view>  
 
-            </view>
-        </view>
 </view>

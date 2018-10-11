@@ -32,13 +32,13 @@
       {
         "selectedIconPath": "images/sq_red.png",
         "iconPath": "images/sq_gray.png",
-        "pagePath": "pages/canteen/canteen",
+        "pagePath": "pages/orders/orders",
         "text": "社会"
       },
       {
         "selectedIconPath": "images/wd_red.png",
         "iconPath": "images/wd_gray.png",
-        "pagePath": "pages/canteen/canteen",
+      "pagePath": "pages/orders/orders",
         "text": "我的"
       }
     ],

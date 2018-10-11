@@ -1,9 +1,52 @@
+<view style='position:fixed;top:0px;z-index:2'>
+<!-- 搜索 -->
+<view class="weui-search-bar" style='background-color:rgb(234,84,33)'>
+          <view class="weui-search-bar__form">
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                    <input type="text" class="weui-search-bar__input" placeholder="搜索美食名称" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+                    <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                        <icon type="clear" size="14"></icon>
+                    </view>
+                </view>
+                <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                    <icon class="weui-icon-search" type="search" size="14"></icon>
+                    <view class="weui-search-bar__text" style='font-size:12px;'>搜索美食名称</view>
+                </label>
+            </view>
+            <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+        </view>
+        <view class="weui-cells searchbar-result" wx:if="{{inputVal.length > 0}}">
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+        </view>
+
 <view class="grayBg" bindtap='clickTogether' hidden='{{!downFlag}}'>
 </view>
+
 <view class="select">
-  <view class="together box" bindtap="clickTogether" hover-class="hoverClass">综合<image src='../../images/down.png' class="downIcon"></image></view>
+  <view class="together box" bindtap="clickTogether" hover-class="hoverClass">综合排序<image src='../../images/down.png' class="downIcon"></image></view>
   <view class="sellMost box" hover-class="hoverClass" bindtap='clickMost'>销量最高</view>
-  <view class="todayHot box" hover-class="hoverClass" bindtap='clickHot'>今日热门</view>
+  <view class="todayHot box" hover-class="hoverClass" bindtap='clickHot'>距离最近</view>
+  <view class="todayHot box" hover-class="hoverClass" bindtap='clickHot'>筛选</view>
 </view>
 
 <!-- downTap -->
@@ -12,81 +55,42 @@
   <view class='downItem' bindtap='clickTogether'>评分最高</view>
   <view class="downItem" bindtap='clickTogether'>新品推荐</view>
 </view>
-
+</view>
 <!-- list -->
-<view class="weui-panel__bd" style="margin-top:90rpx">
+<view class="weui-panel__bd" style="margin-top:170rpx">
 
- <navigator url="../canteenMenu/canteenMenu" class="weui-media-box weui-media-box_appmsg"  hover-class="none"    open-type="navigate" >
-                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                        <image class="weui-media-box__thumb" src="../../images/food.png" />
-                    </view>
-                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                        <view class="weui-media-box__title">吃的一xxx</view>
-                        <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
-                    </view>
-                </navigator>
-                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="none">
-                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                        <image class="weui-media-box__thumb" src="../../images/food.png" />
-                    </view>
-                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                        <view class="weui-media-box__title">标题二</view>
-                        <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
-                    </view>
-                </navigator>
-                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="none">
-                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                        <image class="weui-media-box__thumb" src="../../images/food.png" />
-                    </view>
-                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                        <view class="weui-media-box__title">吃的</view>
-                        <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
-                    </view>
-                </navigator>
-                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="none">
-                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                        <image class="weui-media-box__thumb" src="../../images/food.png" />
-                    </view>
-                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                        <view class="weui-media-box__title">吃的三</view>
-                        <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
-                    </view>
-                </navigator>
-                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="none">
-                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                        <image class="weui-media-box__thumb" src="../../images/food.png" />
-                    </view>
-                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                        <view class="weui-media-box__title">吃的四</view>
-                        <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
-                    </view>
-                </navigator>
-                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="none">
-                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                        <image class="weui-media-box__thumb" src="../../images/food.png" />
-                    </view>
-                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                        <view class="weui-media-box__title">吃的五</view>
-                        <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
-                    </view>
-                </navigator>
-                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="none">
-                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                        <image class="weui-media-box__thumb" src="../../images/food.png" />
-                    </view>
-                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                        <view class="weui-media-box__title">吃的六</view>
-                        <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
-                    </view>
-                </navigator>
-                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="none">
-                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                        <image class="weui-media-box__thumb" src="../../images/food.png" />
-                    </view>
-                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                        <view class="weui-media-box__title">吃的七</view>
-                        <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
-                    </view>
-                </navigator>
+ <navigator url="../canteenMenu/canteenMenu"   hover-class="none"    open-type="navigate" class="stList">
+                    <image src='../../images/shitang1.png' ></image>
+</navigator>
+                
+ <navigator url="../canteenMenu/canteenMenu"  hover-class="none"    open-type="navigate" class="stList">
+                    <image src='../../images/shitang2.png' style="margin-left:8px"></image>
+</navigator>
+                
+ <navigator url="../canteenMenu/canteenMenu"   hover-class="none"    open-type="navigate" class="stList">
+                    <image src='../../images/shitang3.png' style="margin-left:8px"></image>
+</navigator>
+<navigator url="../canteenMenu/canteenMenu"   hover-class="none"    open-type="navigate" class="stList">
+                    <image src='../../images/shitang1.png' ></image>
+</navigator>
+                
+ <navigator url="../canteenMenu/canteenMenu"  hover-class="none"    open-type="navigate" class="stList">
+                    <image src='../../images/shitang2.png' style="margin-left:8px"></image>
+</navigator>
+                
+ <navigator url="../canteenMenu/canteenMenu"   hover-class="none"    open-type="navigate" class="stList">
+                    <image src='../../images/shitang3.png' style="margin-left:8px"></image>
+</navigator>
+<navigator url="../canteenMenu/canteenMenu"   hover-class="none"    open-type="navigate" class="stList">
+                    <image src='../../images/shitang1.png' ></image>
+</navigator>
+                
+ <navigator url="../canteenMenu/canteenMenu"  hover-class="none"    open-type="navigate" class="stList">
+                    <image src='../../images/shitang2.png' style="margin-left:8px"></image>
+</navigator>
+                
+ <navigator url="../canteenMenu/canteenMenu"   hover-class="none"    open-type="navigate" class="stList">
+                    <image src='../../images/shitang3.png' style="margin-left:8px"></image>
+</navigator>
 
-            </view>
+</view>

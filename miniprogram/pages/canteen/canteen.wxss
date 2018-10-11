@@ -1,5 +1,5 @@
 .grayBg{
-  z-index: 1;
+  z-index: 2;
   width: 100%;
   height: 100%;
   background:rgba(0, 0, 0, 0.4);
@@ -11,10 +11,9 @@
   height:90rpx;
   line-height: 90rpx;
   border-bottom: solid 1px #eee;
-  position:fixed;
   top:0;
   width: 750rpx;
-  z-index: 2;
+  z-index: 3;
   background: #fff;
   font-size:15px;
   text-align: center;
@@ -30,6 +29,8 @@
   border-right: 1px solid #eee;
   display: block;
   flex:1;
+  font-size: 12px;
+  color: rgb(161,161,161)
 }
 
 .downTap{
@@ -37,16 +38,20 @@
   position: fixed;
   z-index: 2;
   background: #fff;
-  width: 250rpx;
+  width: 190rpx;
 }
 
 .downItem{
 text-align: center;
 border-bottom: 1px solid #eee;
-font-size: 15px;
+font-size: 12px;
 height: 90rpx;
 line-height: 45px;
+color: rgb(161,161,161);
 }
 .hoverClass{
   background-color: #eee;
+}
+.stList image{
+  width: 720rpx;
 }

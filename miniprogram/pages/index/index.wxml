@@ -62,7 +62,7 @@
   </view>
 <!-- 菜单menu -->
 <view class="menu" >
-  <navigator class="menu_item" wx:for="{{menuItem}}" wx:for-item="item" wx:key="item">
+  <navigator class="menu_item" wx:for="{{menuItem}}" wx:for-item="item" wx:key="item" url="{{item.path}}">
     <image src='{{item.src}}'></image>
     <text>{{item.name}}</text>
   </navigator> 
@@ -115,7 +115,7 @@
   </scroll-view>
   <view style='padding:30rpx;'>
   <text class="title" style='margin-bottom:30rpx;'>卡路里排行榜</text>
-  <view style='display:flex;justify-content:space-around'>
+  <view style='display:flex;justify-content:space-around;margin-top:10rpx'>
     <view class="bangBG">
       <image src='../../images/yuebang.png' class="bangDan"></image>
     </view>

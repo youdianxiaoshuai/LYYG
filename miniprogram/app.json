@@ -3,10 +3,9 @@
     "pages/index/index",
     "pages/canteenMenu/canteenMenu",
     "pages/canteen/canteen",
-    //"pages/logs/logs",
     "pages/orders/orders",
-    "pages/orderDetails/orderDetails"
-
+    "pages/orderDetails/orderDetails",
+    "pages/community/community"
   ],
   "window": {
     "navigationBarTextStyle": "white",
@@ -33,8 +32,8 @@
       {
         "selectedIconPath": "images/sq_red.png",
         "iconPath": "images/sq_gray.png",
-        "pagePath": "pages/orders/orders",
-        "text": "社会"
+        "pagePath": "pages/community/community",
+        "text": "社区"
       },
       {
         "selectedIconPath": "images/wd_red.png",

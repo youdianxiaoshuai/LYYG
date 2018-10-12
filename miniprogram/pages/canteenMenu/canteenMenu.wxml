@@ -1,6 +1,8 @@
 <view class="head">
-  <navigator url='' open-type='navigator' class='item'>
-    <image src="../../images/food.png" class="canteenImg"></image>
+  <image src='../../images/stBG.jpg' class="stBG" ></image>
+
+  <navigator url='' open-type='navigator' class='item' style='z-index:2'>
+    <image src="../../images/stLogo1.png" class="canteenImg" style="margin-top:20rpx;" ></image>
   </navigator>
 </view>
 <view class="canteenInfo">
@@ -13,3 +15,54 @@
     <text class="distance">距离200m</text>
   </view>
 </view>
+<view class="weui-tab">
+            <view class="weui-navbar">
+                <block wx:for="{{tabs}}" wx:key="*this">
+                    <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                        <view class="weui-navbar__title">{{item}}</view>
+                    </view>
+                </block>
+                <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+            </view>
+            <view class="weui-tab__panel">
+                <view class="weui-tab__content" hidden="{{activeIndex != 0}}" >
+                  <scroll-view scroll-y="true" style='display:inline-block;width:25%'>
+                  <view class='left'>
+                    <view wx:for="{{leftMenu}}" wx:for-item="item" >
+                      {{item}}
+                    </view>
+                    </view>
+                  </scroll-view>
+                  <scroll-view scroll-y="true" style='display:inline-block;width:75%'>
+                  <view class='right'>
+                    <view class="menuItem" wx:for="{{menuItem}}" wx:for-item="item" wx:key="{{index}}" >
+          
+                      <image src='{{item.img}}' style="width:174rpx;height:200rpx;flex:none"></image>
+                      <view class="item-right" style="display:flex;flex-direction:column">
+                        <text style='font-size:26rpx;margin-left:10rpx'>{{item.name}}</text>
+                        <image src='../../images/caipinDesc.png' style='flex:none;width:280rpx;height:100rpx;margin:10rpx;'></image>
+                        <view style='display:flex;width:200px;height:500px;display:relative;' >
+                          <text style='color:rgb(234,84,33);margin-left:10rpx;'>￥{{item.price}}</text>
+                          <view style='right:10px;position:absolute'>
+                            <image src='../../images/jian.png' style='width:20px;height:20px' hidden='{{item.count<=0}}'  bindtap="desCount"  id="{{index}}"></image>
+                            <text style='margin-left:10px' hidden='{{item.count<=0}}'>{{item.count}}</text>
+                            <image src='../../images/jia.png' style='width:20px;height:20px;margin-left:10px' bindtap="addCount" data-idd="{{index}}" id="{{index}}"></image>
+                          </view>
+                        </view>
+                      </view>
+                    </view>
+                    </view>
+                  </scroll-view>
+                    <view class="bottom" >
+                     <image src='../../images/gwc.png' style='width:100rpx;height:100rpx;margin-left:20px;margin-top:-16px;display:inline-block' ></image>
+                      <text hidden='{{countall!=0}}' style='color:#ccc;font-size:14px;position: fixed;bottom: 11px;left:85px'>未选购商品</text><text hidden='{{countall==0}}' style='color:#ccc;font-size:14px;position: fixed;bottom: 11px;left:85px'>餐品数量：{{countall}}</text>
+                      <text hidden='{{price==1}}' style="color:rgb(234,84,33);position:fixed;right:115px;bottom:10px;">￥{{price}}</text>
+                      <navigator style='position:fixed;right:10px;bottom:0;width:100px;height:40px;background-color:rgb(83,82,88);color:rgb(212,212,212);text-align:center' url=''>
+                      确认下单
+                      </navigator>
+                    </view>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 1}}" style='z-index:1'>选项二的内容</view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 2}}">选项三的内容</view>
+            </view>
+        </view>

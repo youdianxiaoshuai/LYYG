@@ -7,7 +7,7 @@
 </view>
 <view class="canteenInfo">
   <view class="cName">
-    <text class="canteenName">红红火火大炸鸡</text>
+    <text class="canteenName">一食堂</text>
   </view>
   <view class="cInfo">
     <text class="score">评分4.7</text>
@@ -57,12 +57,14 @@
                      <image src='../../images/gwc.png' style='width:100rpx;height:100rpx;margin-left:20px;margin-top:-16px;display:inline-block' ></image>
                       <text hidden='{{countall!=0}}' style='color:#ccc;font-size:14px;position: fixed;bottom: 11px;left:85px'>未选购商品</text><text hidden='{{countall==0}}' style='color:#ccc;font-size:14px;position: fixed;bottom: 11px;left:85px'>餐品数量：{{countall}}</text>
                       <text hidden='{{price==1}}' style="color:rgb(234,84,33);position:fixed;right:115px;bottom:10px;">￥{{price}}</text>
-                      <navigator style='position:fixed;right:10px;bottom:0;width:100px;height:40px;background-color:rgb(83,82,88);color:rgb(212,212,212);text-align:center' url=''>
+                      <view style='position:fixed;right:10px;bottom:0;width:100px;height:40px;background-color:rgb(83,82,88);color:rgb(212,212,212);text-align:center' url='../submitMenu/submitMenu?yuan={{yuan}}' bindtap='submitMenu'>
                       确认下单
-                      </navigator>
+                      </view>
                     </view>
                 </view>
-                <view class="weui-tab__content" hidden="{{activeIndex != 1}}" style='z-index:1'>选项二的内容</view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 1}}" style='z-index:1'>
+                  <image src='../../images/pingjia.jpg' style='width:750rpx;height:2724rpx;'></image>
+                </view>
                 <view class="weui-tab__content" hidden="{{activeIndex != 2}}">选项三的内容</view>
             </view>
         </view>

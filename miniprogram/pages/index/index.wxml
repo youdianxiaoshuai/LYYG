@@ -104,7 +104,7 @@
     <text style='font-size:26rpx;margin-top:20rpx;'>共66份 ></text>
   </view>
   <scroll-view  scroll-x="true" style='height:300rpx;width:750rpx;'>
-  <view style="750rpx;display:flex;flex-direction:row;justify-content:flex-start;">
+  <view style="750rpx;display:flex;flex-direction:row;justify-content:flex-start;" bindtap='bmd'>
    <image src='../../images/bmd1.png' class="bmdItem"  ></image>
    <image src='../../images/bmd2.png' class="bmdItem" ></image>
    <image src='../../images/bmd3.png' class="bmdItem" ></image>

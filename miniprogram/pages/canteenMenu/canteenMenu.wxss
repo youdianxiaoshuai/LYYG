@@ -38,6 +38,7 @@ color: transparent;
   position: relative;
   top:10rpx;
   z-index: 2;
+  background-color: white;
 }
 
 .canteenName{

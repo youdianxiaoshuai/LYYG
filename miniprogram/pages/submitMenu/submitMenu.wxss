@@ -1,0 +1,51 @@
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+page,
+.page,
+.page__bd{
+    height: 100%;
+}
+.page__bd{
+    padding-bottom: 0;
+}
+
+.shouhuodizhi image{
+  width: 750rpx;
+  height: 280rpx;
+}
+
+.items{
+  width: 750rpx;
+  height: 140rpx;
+  background-color:rgb(251,251,251);
+  padding: 20rpx; 
+  display: flex;
+}
+
+.items image{
+  width: 120rpx;
+  height: 120rpx;
+}
+.dixia{
+  width:750rpx;
+  height:84rpx;
+  font-size:30rpx;
+  background-color:rgb(51,51,51);
+  display:flex;
+  flex-direction: row-reverse;
+}
+
+.dixia2{
+  width:750rpx;
+  height:84rpx;
+  font-size:30rpx;
+  background-color:rgb(51,51,51);
+  display:flex;
+  position: absolute;
+  bottom:0;
+  flex-direction: row-reverse;
+}

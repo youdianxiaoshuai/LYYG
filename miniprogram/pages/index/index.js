@@ -33,6 +33,11 @@ Page({
       inputVal: e.detail.value
     });
   },
+  bmd:function(e){
+    wx.navigateTo({
+      url: '../bmd/bmd',
+    })
+  },
  
  
  

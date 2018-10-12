@@ -60,6 +60,21 @@ Page({
       price: money
     })
   },
+  submitMenu:function(e){
+    var x=this.data.menuItem;
+    var temp=[];
+    for(var i=0;i<x.length;i++){
+      if(x[i].count>0){
+        temp.push(x[i]);
+      }
+    }
+    var yuan = JSON.stringify({ total: this.data.price, items: temp });
+    console.log(yuan)
+    console.log("url:" + '../submitMenu/submitMenu?yuan=' + yuan)
+    wx.navigateTo({
+      url: '../submitMenu/submitMenu?yuan='+yuan
+    })
+  },
   onLoad: function () {
     var that = this;
     wx.getSystemInfo({

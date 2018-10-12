@@ -3,13 +3,15 @@
     "pages/index/index",
     "pages/canteenMenu/canteenMenu",
     "pages/canteen/canteen",
-    "pages/logs/logs"
+    //"pages/logs/logs",
+    "pages/orders/orders",
+    "pages/orderDetails/orderDetails"
 
   ],
   "window": {
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "云食堂",
-    "navigationBarBackgroundColor":"#f5846c",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "智慧食堂",
+    "navigationBarBackgroundColor":"#ea5421",
     "enablePullDownRefresh":true,
     "backgroundTextStyle": "light"
 
@@ -25,19 +27,19 @@
       {
         "selectedIconPath": "images/dd_red.png",
         "iconPath": "images/dd_gray.png",
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/orders/orders",
         "text": "订单"
       },
       {
         "selectedIconPath": "images/sq_red.png",
         "iconPath": "images/sq_gray.png",
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/orders/orders",
         "text": "社会"
       },
       {
         "selectedIconPath": "images/wd_red.png",
         "iconPath": "images/wd_gray.png",
-        "pagePath": "pages/logs/logs",
+      "pagePath": "pages/orders/orders",
         "text": "我的"
       }
     ],

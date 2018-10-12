@@ -1,20 +1,26 @@
 Page({
   data: {
+    cloud: "",
     servicedetail: {},
-    totalTime:300,
+    totalTime:1800,
     countDownDay:99,
     countDownHour:23,
     countDownMinute:59,
     countDownSecond:59
   },
   onLoad: function (options) {
+    this.setData({
+      cloud: getApp().cloud
+    });
     const i = options.id;
-    const name = options.name
-    const imageurl = options.imageurl
+    const name = options.name;
+    const imageurl = options.imageurl;
+    const num = options.num;
     this.setData({
       servicedetail: {
         "name": name,
-        "imgurl": imageurl
+        "imgurl": imageurl,
+        "number":num
       }
     })
     wx.setNavigationBarTitle({

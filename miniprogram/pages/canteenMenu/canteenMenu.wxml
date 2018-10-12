@@ -26,14 +26,16 @@
             </view>
             <view class="weui-tab__panel">
                 <view class="weui-tab__content" hidden="{{activeIndex != 0}}" >
-                  <scroll-view scroll-y="true" style='display:inline-block;width:25%'>
+                  <scroll-view scroll-y="true" style='display:inline-block;width:25%;vertical-align:top;'>
                   <view class='left'>
+                  <view style='color:red'>智能推荐</view>
+                  <view style='color:red'>热销</view>
                     <view wx:for="{{leftMenu}}" wx:for-item="item" >
                       {{item}}
                     </view>
                     </view>
                   </scroll-view>
-                  <scroll-view scroll-y="true" style='display:inline-block;width:75%'>
+                  <scroll-view scroll-y="true" style='display:inline-block;width:75%;vertical-align:top;'>
                   <view class='right'>
                     <view class="menuItem" wx:for="{{menuItem}}" wx:for-item="item" wx:key="{{index}}" >
           
@@ -41,12 +43,12 @@
                       <view class="item-right" style="display:flex;flex-direction:column">
                         <text style='font-size:26rpx;margin-left:10rpx'>{{item.name}}</text>
                         <image src='../../images/caipinDesc.png' style='flex:none;width:280rpx;height:100rpx;margin:10rpx;'></image>
-                        <view style='display:flex;width:200px;height:500px;display:relative;' >
+                        <view style='display:flex;width:400rpx;height:1000rpx;display:relative;' >
                           <text style='color:rgb(234,84,33);margin-left:10rpx;'>￥{{item.price}}</text>
-                          <view style='right:10px;position:absolute'>
-                            <image src='../../images/jian.png' style='width:20px;height:20px' hidden='{{item.count<=0}}'  bindtap="desCount"  id="{{index}}"></image>
-                            <text style='margin-left:10px' hidden='{{item.count<=0}}'>{{item.count}}</text>
-                            <image src='../../images/jia.png' style='width:20px;height:20px;margin-left:10px' bindtap="addCount" data-idd="{{index}}" id="{{index}}"></image>
+                          <view style='right:20rpx;position:absolute'>
+                            <image src='../../images/jian.png' style='width:40rpx;height:40rpx' hidden='{{item.count<=0}}'  bindtap="desCount"  id="{{index}}"></image>
+                            <text style='margin-left:20rpx' hidden='{{item.count<=0}}'>{{item.count}}</text>
+                            <image src='../../images/jia.png' style='width:40rpx;height:40rpx;margin-left:20rpx' bindtap="addCount" data-idd="{{index}}" id="{{index}}"></image>
                           </view>
                         </view>
                       </view>
@@ -54,16 +56,16 @@
                     </view>
                   </scroll-view>
                     <view class="bottom" >
-                     <image src='../../images/gwc.png' style='width:100rpx;height:100rpx;margin-left:20px;margin-top:-16px;display:inline-block' ></image>
-                      <text hidden='{{countall!=0}}' style='color:#ccc;font-size:14px;position: fixed;bottom: 11px;left:85px'>未选购商品</text><text hidden='{{countall==0}}' style='color:#ccc;font-size:14px;position: fixed;bottom: 11px;left:85px'>餐品数量：{{countall}}</text>
-                      <text hidden='{{price==1}}' style="color:rgb(234,84,33);position:fixed;right:115px;bottom:10px;">￥{{price}}</text>
-                      <view style='position:fixed;right:10px;bottom:0;width:100px;height:40px;background-color:rgb(83,82,88);color:rgb(212,212,212);text-align:center' url='../submitMenu/submitMenu?yuan={{yuan}}' bindtap='submitMenu'>
+                     <image src='../../images/gwc.png' style='width:100rpx;height:100rpx;margin-left:40rpx;margin-top:-16px;display:inline-block;vertical-align:top' ></image>
+                      <text hidden='{{countall!=0}}' style='color:#ccc;font-size:14px;position: fixed;bottom: 22rpx;left:170rpx'>未选购商品</text><text hidden='{{countall==0}}' style='color:#ccc;font-size:28rpx;position: fixed;bottom: 22rpx;left:170rpx'>餐品数量：{{countall}}</text>
+                      <text hidden='{{price==1}}' style="color:rgb(234,84,33);position:fixed;right:230rpx;bottom:20rpx;">￥{{price}}</text>
+                      <view style='position:fixed;right:10px;bottom:0;width:200rpx;height:40px;background-color:rgb(83,82,88);color:rgb(212,212,212);text-align:center' url='../submitMenu/submitMenu?yuan={{yuan}}' bindtap='submitMenu'>
                       确认下单
                       </view>
                     </view>
                 </view>
                 <view class="weui-tab__content" hidden="{{activeIndex != 1}}" style='z-index:1'>
-                  <image src='../../images/pingjia.jpg' style='width:750rpx;height:2724rpx;'></image>
+                  <image src='{{cloud}}/pingjia.jpg' style='width:750rpx;height:2724rpx;'></image>
                 </view>
                 <view class="weui-tab__content" hidden="{{activeIndex != 2}}">选项三的内容</view>
             </view>

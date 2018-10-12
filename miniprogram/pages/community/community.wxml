@@ -1,0 +1,112 @@
+<!--menubar-->
+<scroll-view scroll-x="true" class="menubar">
+    <!-- 搜索 -->
+<view class="weui-search-bar">
+          <view class="weui-search-bar__form">
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                    <input type="text" class="weui-search-bar__input" placeholder="搜索美食话题" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+                    <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                        <icon type="clear" size="14"></icon>
+                    </view>
+                </view>
+                <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                    <icon class="weui-icon-search" type="search" size="14"></icon>
+                    <view class="weui-search-bar__text" style='font-size:12px;'>搜索美食话题</view>
+                </label>
+            </view>
+            <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+        </view>
+        <view class="weui-cells searchbar-result" wx:if="{{inputVal.length > 0}}">
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+        </view>
+</scroll-view>
+<!--content-->
+<scroll-view scroll-y="true" class="content" style="height: {{windowHeight}}px; width: {{windowWidth}}px;" scroll-y="true" bindscrolltoupper="pullDownRefresh" bindscrolltolower="pullUpLoad">
+    <!--top-->
+    <!--<view class="newsBox top" >-->
+    <view class="newsBox top" >
+
+        <view class="weui-tab">
+            <view class="weui-navbar">
+                <block wx:for="{{tabs}}" wx:key="*this">
+                    <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                        <view class="weui-navbar__title">{{item}}</view>
+                    </view>
+                </block>
+                <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+            </view>
+            <view class="weui-tab__panel">
+                <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                <block >
+        <div class="weui_tab_bd"></div>
+         <navigator class="details" url="images/photo1.jpg" redirect="flase" >
+            <text class="title">食堂卫生整洁</text>
+            <view class="picBox">
+                    <image src="{{cloud}}/photo1.jpg"></image>                  
+                </view>
+              <view class="info">
+                    <text class="author">哈哈小弟</text>
+                    <text class="date">我有意见，这么给力的饭菜，会让我长肉的！</text>
+                </view>
+              <text class="title">西式餐厅</text>
+              <view class="picBox">
+                    <image src="{{cloud}}/photo3.jpg"></image>                  
+                </view>
+              <view class="info">
+                    <text class="author">蝴蝶的小阿飞</text>
+                    <text class="date">大海啊，你都是腿</text>
+                </view>
+                <text class="title">鱼香肉丝没有鱼肉</text>
+            <view class="picBox">
+                    <image src="{{cloud}}/photo2.jpg"></image>                  
+                </view>
+              <view class="info">
+                    <text class="author">雷孟飞</text>
+                    <text class="date">没有鱼肉的鱼香肉丝却做出了鱼肉的香味，赞</text>
+                </view>
+                <text class="title">食堂的饭菜太贵了</text>
+            <view class="picBox">
+                    <image src="{{cloud}}/photo4.jpg"></image>                  
+                </view>
+              <view class="info">
+                    <text class="author">不知道取啥名</text>
+                    <text class="date">吃一顿饭竟然要20元，是食堂黑心，还是我太穷了！</text>
+                </view>
+          </navigator>
+        </block>
+                </view>
+
+                <view class="weui-tab__content pic_kaluli"  hidden="{{activeIndex != 1}}" >
+                <image src='{{cloud}}/jiaoliuqu1.jpeg'>
+                </image>
+                <image src='{{cloud}}/jiaoliuqu2.jpeg'>
+                </image>
+                </view>
+                <view class="pic_kaluli" hidden="{{activeIndex != 2}}">
+                <image src='{{cloud}}/kaluli.png'>
+                </image>
+                </view>
+            </view>
+        </view>      
+    </view>
+</scroll-view>

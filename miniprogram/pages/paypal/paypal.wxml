@@ -4,7 +4,7 @@
   <text style='font-weight:600'>￥{{pal}}.00</text>
   <text class="a">订单编号：-51380024982028</text>
 </view>
-<image src='../../images/zffs.png' class="img"></image>
+<image src='{{cloud}}/zffs.png' class="img"></image>
 <view class="d" bindtap='showInputLayer'>
 <text style='font-size:20px;display:inline-block'>确认支付</text>   <text style='font-size:27px;margin-left:20px;display:inline-block;font-weight:600'>{{pal}}.00</text>
 </view>

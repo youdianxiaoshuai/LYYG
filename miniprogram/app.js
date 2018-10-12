@@ -11,5 +11,6 @@ App({
     // }
 
     this.globalData = {}
-  }
+  }, 
+  cloud:"cloud://lyyg-e9073e.6c79-lyyg-e9073e"
 })

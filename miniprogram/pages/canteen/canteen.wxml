@@ -43,7 +43,7 @@
 </view>
 
 <view class="select">
-  <view class="together box" bindtap="clickTogether" hover-class="hoverClass">综合排序<image src='../../images/down.png' class="downIcon"></image></view>
+  <view class="together box" bindtap="clickTogether" hover-class="hoverClass">综合排序<image src='{{cloud}}/down.png' class="downIcon"></image></view>
   <view class="sellMost box" hover-class="hoverClass" bindtap='clickMost'>销量最高</view>
   <view class="todayHot box" hover-class="hoverClass" bindtap='clickHot'>距离最近</view>
   <view class="todayHot box" hover-class="hoverClass" bindtap='clickHot'>筛选</view>
@@ -60,37 +60,37 @@
 <view class="weui-panel__bd" style="margin-top:170rpx">
 
  <navigator url="../canteenMenu/canteenMenu"   hover-class="none"    open-type="navigate" class="stList">
-                    <image src='../../images/shitang1.png' ></image>
+                    <image src='{{cloud}}/shitang1.png' ></image>
 </navigator>
                 
  <navigator url="../canteenMenu/canteenMenu"  hover-class="none"    open-type="navigate" class="stList">
-                    <image src='../../images/shitang2.png' style="margin-left:8px"></image>
+                    <image src='{{cloud}}/shitang2.png' style="margin-left:8px"></image>
 </navigator>
                 
  <navigator url="../canteenMenu/canteenMenu"   hover-class="none"    open-type="navigate" class="stList">
-                    <image src='../../images/shitang3.png' style="margin-left:8px"></image>
+                    <image src='{{cloud}}/shitang3.png' style="margin-left:8px"></image>
 </navigator>
 <navigator url="../canteenMenu/canteenMenu"   hover-class="none"    open-type="navigate" class="stList">
-                    <image src='../../images/shitang1.png' ></image>
+                    <image src='{{cloud}}/shitang1.png' ></image>
 </navigator>
                 
  <navigator url="../canteenMenu/canteenMenu"  hover-class="none"    open-type="navigate" class="stList">
-                    <image src='../../images/shitang2.png' style="margin-left:8px"></image>
+                    <image src='{{cloud}}/shitang2.png' style="margin-left:8px"></image>
 </navigator>
                 
  <navigator url="../canteenMenu/canteenMenu"   hover-class="none"    open-type="navigate" class="stList">
-                    <image src='../../images/shitang3.png' style="margin-left:8px"></image>
+                    <image src='{{cloud}}/shitang3.png' style="margin-left:8px"></image>
 </navigator>
 <navigator url="../canteenMenu/canteenMenu"   hover-class="none"    open-type="navigate" class="stList">
-                    <image src='../../images/shitang1.png' ></image>
+                    <image src='{{cloud}}/shitang1.png' ></image>
 </navigator>
                 
  <navigator url="../canteenMenu/canteenMenu"  hover-class="none"    open-type="navigate" class="stList">
-                    <image src='../../images/shitang2.png' style="margin-left:8px"></image>
+                    <image src='{{cloud}}/shitang2.png' style="margin-left:8px"></image>
 </navigator>
                 
  <navigator url="../canteenMenu/canteenMenu"   hover-class="none"    open-type="navigate" class="stList">
-                    <image src='../../images/shitang3.png' style="margin-left:8px"></image>
+                    <image src='{{cloud}}/shitang3.png' style="margin-left:8px"></image>
 </navigator>
 
 </view>

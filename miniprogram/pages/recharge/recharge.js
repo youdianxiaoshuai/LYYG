@@ -4,42 +4,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    downFlag:false,
     cloud: "",
   },
-  clickTogether:function(e){
-    var flag = this.data.downFlag;
-    console.log(flag)
-    this.setData({downFlag:!flag});
-    console.log(this.data.downFlag)
-  },
-  clickHot:function(e){
-    this.setData({downFlag:false})
-  },
-  clickMost:function(e){
-    this.setData({ downFlag: false })
-  },
-  showInput: function () {
-    this.setData({
-      inputShowed: true
-    });
-  },
-  hideInput: function () {
-    this.setData({
-      inputVal: "",
-      inputShowed: false
-    });
-  },
-  clearInput: function () {
-    this.setData({
-      inputVal: ""
-    });
-  },
-  inputTyping: function (e) {
-    this.setData({
-      inputVal: e.detail.value
-    });
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */

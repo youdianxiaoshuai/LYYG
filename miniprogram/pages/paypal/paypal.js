@@ -4,6 +4,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    cloud: "",
     pal:0,
     showPayPwdInput: false,  //是否展示密码输入层
     pwdVal: '',  //输入的密码
@@ -54,6 +55,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+      cloud: getApp().cloud
+    })
     this.setData({
       pal:options.money
     })

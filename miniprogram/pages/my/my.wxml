@@ -1,0 +1,31 @@
+<view class="container">
+  <scroll-view scroll-y="true" style="height: 100%;">
+    <view class="header-container">
+      <view class="header-user">
+        <view class="header-image">
+        <image src="{{cloud}}/photo1.jpg"></image>
+      </view>
+      <view class="header-text">
+      <text>李运维</text>
+      <text>学校：吉林大学201x级xx学院</text>
+      <text>学号：2018xxxxx</text>
+      </view>
+      </view>
+    </view>
+    
+    
+    <navigator url="../recharge/recharge">
+      <view class="item-container" style="margin-top: 30rpx;">
+        <image class="item-icon" src="{{cloud}}/yinpin.png" />
+        <text class="item-label">校园卡充值</text>
+      </view>
+    </navigator>
+
+    <navigator url="">
+      <view class="item-container" style="margin-top: 2rpx;">
+        <image class="item-icon" src="{{cloud}}/zhinengtuijian.png" />
+        <text class="item-label">个人信息</text>
+      </view>
+    </navigator>
+  </scroll-view>
+</view>

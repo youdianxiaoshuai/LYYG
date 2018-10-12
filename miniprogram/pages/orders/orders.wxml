@@ -1,21 +1,40 @@
 <view class="container">
+  <view class="my-reserve-menus">
+    <navigator class="my-reserve-menusitem" wx:for="{{menuslist}}" wx:key="{{item.id}}" url="">
+    <view class="reserve-top-menu">
+      <image src="{{item.imageurl}}"></image>
+    </view>
+    </navigator>
+  </view>
+
+  <view><text>最近订单</text></view>
 	<!-- <view class="container-body"> -->
   <scroll-view class="container-body" scroll-y="true" scroll-top="{{scrolltop}}" bindscroll="scrollHandle" lower-threshold="50" bindscrolltolower="scrollLoading">
-		<view class="my-reserve-list">
-        <navigator class="my-reserve-item" wx:for="{{reservelist}}" wx:key="{{item.id}}" url="../orderDetails/orderDetails?id={{item.id}}&name={{item.name}}&imageurl={{item.imgurl}}">
+    <view class="my-reserve-list">
+        <navigator class="my-reserve-item" wx:for="{{reservelist}}" wx:key="{{item.id}}" url="../orderDetails/orderDetails?num={{item.number}}&name={{item.name}}&imageurl={{item.imgurl}}">
+      <view class="my-reserve-item-z">
+        <view class="my-reserve-item-top">
+            <image src="{{logourl}}"></image>
+            <text style="margin-left:5px">取餐柜取餐</text>
+            <text style="margin-left:100px">{{item.orderstatus}}</text>
+        </view>
+        <view class="my-reserve-item-context">
 				<view class="my-reserve-img">
 					<image src="{{item.imgurl}}" mode="aspectFill"></image>
 				</view>
         <view class="my-reserve-text">
 					<view class="my-reserve-title">{{item.name}}</view>
-					<text>预定时间：{{item.time}}</text>
-					<text>姓名：{{item.reserver}}</text>
-          <view wx:if="{{item.state==1}}" class="my-reserve-nocomment"><text>订单完成</text></view>
-          <view wx:elif="{{item.state==0}}" class="my-reserve-comment"><text>进行中...</text></view>
-          <view class="my-reserve-prices"><text>金额：￥{{item.price}}</text></view>
+					<text>下单时间：{{item.time}}</text>
+          <text>总价：￥{{item.price}}</text>
+          <text>取餐地点：{{item.position}}</text>
+          <view class="my-reserve-getgoods"><text>取餐时间：</text><text>{{item.gettime}}</text></view>
+          <text style="color:red">{{item.info}}</text>
+          <view class="my-reserve-prices"><text style="font-size:30rpx;color:#333">取餐号：{{item.number}}</text></view>
 				</view>
-        </navigator>
-		</view>
+        </view>
+        </view>
+      </navigator>
+    </view>
 	<!-- </view> -->
   </scroll-view>
 </view>

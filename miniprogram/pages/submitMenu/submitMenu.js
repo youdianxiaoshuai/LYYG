@@ -4,12 +4,13 @@ Page({
    * 页面的初始数据
    */
   data: {
+    cloud: "",
     total1: 0,
     total2:0,
     orders: [
-      { img: "../../images/caipin1.png", name: "干锅手撕包菜（500g）", price: 22, count: 1 },
-      { img: "../../images/caipin2.png", name: "外婆炖蛋（500g）", price: 19, count: 2 },
-      { img: "../../images/caipin3.png", name: "酸辣土豆丝（250g）", price: 16, count: 3 }],
+      { img: "cloud://lyyg-e9073e.6c79-lyyg-e9073e/caipin1.png", name: "干锅手撕包菜（500g）", price: 22, count: 1 },
+      { img: "cloud://lyyg-e9073e.6c79-lyyg-e9073e/caipin2.png", name: "外婆炖蛋（500g）", price: 19, count: 2 },
+      { img: "cloud://lyyg-e9073e.6c79-lyyg-e9073e/caipin3.png", name: "酸辣土豆丝（250g）", price: 16, count: 3 }],
     tabs: ["餐柜取餐","现在吃"],
     activeIndex: 0,
     sliderOffset: 0,
@@ -26,7 +27,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-        var data = JSON.parse(options.yuan);
+    this.setData({
+      cloud: getApp().cloud
+    })
+    var data = JSON.parse(options.yuan);
     this.setData({ total1: data["total"] + 2 })
     this.setData({ total2: data["total"] })
     this.setData({ orders: data["items"]})

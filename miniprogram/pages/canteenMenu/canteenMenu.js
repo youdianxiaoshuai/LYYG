@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    cloud: "",
     price:0,
     countall:0,
     tabs: ["点餐", "评价", "食堂介绍"],
@@ -76,6 +77,9 @@ Page({
     })
   },
   onLoad: function () {
+    this.setData({
+      cloud: getApp().cloud
+    })
     var that = this;
     wx.getSystemInfo({
       success: function (res) {

@@ -35,8 +35,7 @@ color: transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  top:10rpx;
+
   z-index: 2;
   background-color: white;
 }
@@ -45,7 +44,7 @@ color: transparent;
   font-weight: 550;
 }
 .cName{
-  margin-top: 5px;
+  margin-top: 10rpx;
 }
 
 .cInfo{
@@ -60,7 +59,7 @@ color: transparent;
 
 .score{
   height: 25rpx;
-  margin:0px 20rpx;
+  margin:0rpx 20rpx;
 }
 
 .saleVolume{
@@ -77,9 +76,8 @@ color: transparent;
   width: 100%;
   height: 90rpx;
   position: fixed;
-  bottom: 0;
+  bottom: 0rpx;
   background-color: rgb(80,80,82);
-
 }
 
 .left{
@@ -91,8 +89,8 @@ color: transparent;
 }
 
 .left view{
-  border-bottom: 1px solid #eee;
-  border-right: 1px solid #eee;
+  border-bottom: 2rpx solid #eee;
+  border-right: 2rpx solid #eee;
   background-color: rgb(248,248,248);
   color: rgb(130,130,130);
   font-size: 26rpx;
@@ -104,9 +102,9 @@ color: transparent;
   height:184rpx;
   padding: 20rpx;
   display: flex;
-  margin-bottom: 10px;
+  margin-bottom: 20rpx;
 }
 
 .right{
-  height: 340px;
+  height: 680rpx;
 }

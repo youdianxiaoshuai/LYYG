@@ -12,7 +12,7 @@
             <view class="weui-tab__panel">
                 <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
                 <view class="shouhuodizhi">
-                  <image src='../../images/shouhuodizhi.png'>
+                  <image src='{{cloud}}/shouhuodizhi.png'>
                   </image>
                   
                 </view>
@@ -29,7 +29,7 @@
                      </view>
                    </view>
                    <view style='pading:20rpx 10rpx 0rpx;width:750rpx;height:400rpx;margin-top:20px;margin-left:20rpx'>
-                   <image src='../../images/xiamian.png' style='width:666rpx;height:330rpx;'></image>
+                   <image src='{{cloud}}/xiamian.png' style='width:666rpx;height:330rpx;'></image>
                     </view>
                     <view style='width:100%;height:64rpx;font-size:30rpx;margin-left:40rpx;'>
                       <text>健康评分：</text>
@@ -63,7 +63,7 @@
                      </view>
                    </view>
                    <view style='pading:20rpx 10rpx 0rpx;width:750rpx;height:400rpx;margin-top:20px;margin-left:20rpx'>
-                   <image src='../../images/dixia2.png' style='width:666rpx;height:156rpx;'></image>
+                   <image src='{{cloud}}/dixia2.png' style='width:666rpx;height:156rpx;'></image>
                     </view>
                     <view style='width:100%;height:64rpx;font-size:30rpx;margin-left:40rpx;position:absolute;bottom:42px'>
                       <text>健康评分：</text>

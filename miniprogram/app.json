@@ -1,10 +1,11 @@
 {
   "pages": [
+  
     "pages/index/index",
     "pages/paypal/paypal",
-    "pages/submitMenu/submitMenu",
-    "pages/canteenMenu/canteenMenu",
     "pages/canteen/canteen",
+    "pages/canteenMenu/canteenMenu",
+    "pages/submitMenu/submitMenu",
     "pages/orders/orders",
     "pages/orderDetails/orderDetails",
     "pages/bmd/bmd",

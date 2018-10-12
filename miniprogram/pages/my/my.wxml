@@ -5,9 +5,9 @@
         <view class="header-image">
         <image src="{{cloud}}/photo1.jpg"></image>
       </view>
-      <view class="header-text">
+      <view class="header-text" >
       <text>李运维</text>
-      <text>学校：吉林大学201x级xx学院</text>
+      <text>学校：XX大学201x级xx学院</text>
       <text>学号：2018xxxxx</text>
       </view>
       </view>

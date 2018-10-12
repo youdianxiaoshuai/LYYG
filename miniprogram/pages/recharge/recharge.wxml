@@ -1,0 +1,12 @@
+<view class="recharge-container">
+  <view class="header-container">
+      <image src="../../images/timg.jpg"></image>
+  </view>
+  <view class="header-container">
+    <text>余额:￥30.12</text>
+  </view>
+  <navigator url="../rechargepay/rechargepay">
+      <button class="header-button" type="primary">充值</button>
+  </navigator>
+  
+</view>

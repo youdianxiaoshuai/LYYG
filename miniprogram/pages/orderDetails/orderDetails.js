@@ -9,12 +9,14 @@ Page({
   },
   onLoad: function (options) {
     const i = options.id;
-    const name = options.name
-    const imageurl = options.imageurl
+    const name = options.name;
+    const imageurl = options.imageurl;
+    const num = options.num;
     this.setData({
       servicedetail: {
         "name": name,
-        "imgurl": imageurl
+        "imgurl": imageurl,
+        "number":num
       }
     })
     wx.setNavigationBarTitle({

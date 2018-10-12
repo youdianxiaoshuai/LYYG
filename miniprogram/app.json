@@ -5,8 +5,9 @@
     "pages/canteen/canteen",
     "pages/orders/orders",
     "pages/orderDetails/orderDetails",
-    "pages/my/my"
-
+    "pages/my/my",
+    "pages/recharge/recharge",
+    "pages/rechargepay/rechargepay"
   ],
   "window": {
     "navigationBarTextStyle": "white",

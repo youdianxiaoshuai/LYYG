@@ -1,0 +1,36 @@
+.orderdetail-container{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding:50rpx;
+}
+
+.downcount{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 400rpx;
+}
+
+.downcount text{
+  font-size: 40rpx;
+}
+
+.getfood{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 500rpx;
+}
+
+.getfood text{
+  font-size: 40rpx;
+}
+
+.getfood image{
+  height: 400rpx;
+  width: 400rpx;
+}

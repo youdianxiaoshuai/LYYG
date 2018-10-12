@@ -1,4 +1,13 @@
-<view class="container">
-  <view>取餐倒计时: <text style='color:red'>{{countdown}} </text></view>
-  <view>{{countDownHour}}时:{{countDownMinute}}分:{{countDownSecond}}秒</view>
+<view class="orderdetail-container">
+  <view class="downcount">
+    <text>取餐倒计时:</text>
+    <text style='color:red'>{{countDownHour}}时:{{countDownMinute}}分:{{countDownSecond}}秒</text>
+    <text>取餐码: {{servicedetail.number}}</text>
+  </view>
+  
+  <view class="getfood">
+  <text>凭二维码可在取餐柜取餐</text>
+  <image src="../../images/ewm.png"></image>
+  </view>
 </view>
+<text style="color:blue;margin-left:40%;position:absolute;bottom:5rpx;font-size:30rpx;">常见问题？</text>

@@ -11,7 +11,7 @@
 	<!-- <view class="container-body"> -->
   <scroll-view class="container-body" scroll-y="true" scroll-top="{{scrolltop}}" bindscroll="scrollHandle" lower-threshold="50" bindscrolltolower="scrollLoading">
     <view class="my-reserve-list">
-        <navigator class="my-reserve-item" wx:for="{{reservelist}}" wx:key="{{item.id}}" url="../orderDetails/orderDetails?id={{item.id}}&name={{item.name}}&imageurl={{item.imgurl}}">
+        <navigator class="my-reserve-item" wx:for="{{reservelist}}" wx:key="{{item.id}}" url="../orderDetails/orderDetails?num={{item.number}}&name={{item.name}}&imageurl={{item.imgurl}}">
       <view class="my-reserve-item-z">
         <view class="my-reserve-item-top">
             <image src="{{logourl}}"></image>

@@ -1,10 +1,36 @@
+
 .header-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   height: 200rpx;
-  background-color: rgba(234, 84, 33, 0.9);
-  align-items: center;
-  justify-content: center;
+  background-color: rgba(235, 84, 33, 0.8);
+}
+
+.header-user{
+  margin-top:40rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.header-text{
+  display: flex;
+  flex-direction: column;
+  margin-left: 30rpx;
+}
+.header-text text{
+  font-size: 25rpx;
+}
+
+.header-image{
+  display: flex;
+  flex-direction: row;
+	margin-left: 40rpx;
+}
+
+.header-image image{
+  border-radius: 100rpx;
+  width: 100rpx;
+  height: 100rpx;
 }
 
 .header-avatar {
@@ -27,6 +53,7 @@
   padding-bottom: 20rpx;
   padding-left: 25rpx;
   align-items: center;
+  border-bottom: 1px solid rgb(221, 224, 226);
 }
 
 .item-icon {

@@ -1,0 +1,130 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #f5f6f8;
+} 
+
+.my-reserve-menus{
+  display: flex;
+  padding:10rpx;
+}
+
+.my-reserve-menusitem{
+  display: flex;
+  border-bottom: 2rpx solid #ddd;
+  height: 130rpx;
+  width: 140rpx;
+}
+.reserve-top-menu{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.reserve-top-menu image{
+  height: 100%;
+  width: 125rpx;
+}
+
+.my-reserve-item{
+	display: flex;
+	padding: 20rpx;
+}
+
+.my-reserve-item-z{
+	display: flex;
+  flex-direction: column;
+	height: 100%;
+  width: 100%;
+  border-top-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border:1px solid rgb(221, 224, 226);
+  box-shadow: 2rpx 15rpx 12rpx 7rpx #ffcc99;
+}
+
+.my-reserve-item-top{
+  display: flex;
+  flex-direction: row;
+	margin-left: 20rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+
+.my-reserve-item-top image{
+  width: 45rpx;
+	height: 45rpx;
+}
+
+.my-reserve-item-top text{
+  flex: 1;
+	width: 100%;
+  display: block;
+	color: #888;
+  font-size: 35rpx;
+}
+
+.my-reserve-img{
+  padding: 30rpx;
+	width: 70rpx;
+	height: 70rpx;
+}
+.my-reserve-img image{
+	width: 100%;
+	height: 100%;
+}
+
+.my-reserve-text{
+	flex: 1;
+	margin-left: 30rpx;
+	width: 100%;
+}
+.my-reserve-title{
+	color: #333;
+	width: 100%;
+	font-size: 34rpx;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.my-reserve-text text{
+	display: block;
+	color: #888;
+  font-size: 25rpx;
+}
+.my-reserve-end text{
+  display: block;
+}
+
+.my-reserve-continue text{
+  color:#00FF00;
+}
+
+.my-reserve-getgoods{
+  display: flex;
+  flex-direction: row;
+}
+
+.my-reserve-prices{
+  position: relative;
+  right: 20rpx;
+}
+
+.my-reserve-prices text{
+  text-align: right;
+  color:#333;
+  font-size: 25rpx;
+
+}
+
+.container-body{
+	flex: 1;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.my-reserve-item-context{
+  display: flex;
+  flex-direction: row;
+}

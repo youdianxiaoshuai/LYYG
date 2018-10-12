@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/canteenMenu/canteenMenu",
+    "pages/canteen/canteen",
+    "pages/orders/orders",
+    "pages/orderDetails/orderDetails",
+    "pages/my/my",
+    "pages/recharge/recharge",
+    "pages/rechargepay/rechargepay",
+    "pages/community/community"
+  ],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "智慧食堂",
+    "navigationBarBackgroundColor":"#ea5421",
+    "enablePullDownRefresh":true,
+    "backgroundTextStyle": "light"
+
+  },
+  "tabBar": {
+    "list": [
+      {
+        "selectedIconPath":"images/st_red.png",
+        "iconPath":"images/st_gray.png",
+        "pagePath": "pages/index/index",
+        "text": "食堂"
+      },
+      {
+        "selectedIconPath": "images/dd_red.png",
+        "iconPath": "images/dd_gray.png",
+        "pagePath": "pages/orders/orders",
+        "text": "订单"
+      },
+      {
+        "selectedIconPath": "images/sq_red.png",
+        "iconPath": "images/sq_gray.png",
+        "pagePath": "pages/community/community",
+        "text": "社区"
+      },
+      {
+        "selectedIconPath": "images/wd_red.png",
+        "iconPath": "images/wd_gray.png",
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+    ],
+    "selectedColor":"#ff0000"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

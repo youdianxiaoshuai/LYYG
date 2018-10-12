@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/canteenMenu/canteenMenu",
     "pages/index/index",
+    "pages/canteenMenu/canteenMenu",
+    
     "pages/canteen/canteen",
     "pages/orders/orders",
     "pages/orderDetails/orderDetails"

@@ -1,7 +1,7 @@
 Page({
   data: {
     servicedetail: {},
-    totalTime:300,
+    totalTime:1800,
     countDownDay:99,
     countDownHour:23,
     countDownMinute:59,
